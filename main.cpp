@@ -16,13 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
+  int
+  bool
+  float
+  double
+  void
+  char
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -64,10 +63,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int cups = 25;
+    int count = 12;
+    int totalNumberOfMonkeys = 37;
+    bool isThatTooManyMonkeys = true;
+    bool callAuthorities = false;
+    bool isCupHalfFull = false;
+    float pie = 3.14f;
+    float tempInDegrees = 15.5f;
+    float avgNumberOfChildren = 2.5f;
+    double bigPie = 3.14159;
+    double numberOfWheels = 4.0;
+    double numberOfLegs = 3.5;
+    char yesOrNo = 'y';
+    char thisVarIsA = 'A';
+    char letterForRespects = 'F';
     
-
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, cups, count, totalNumberOfMonkeys, isThatTooManyMonkeys, callAuthorities, isCupHalfFull, pie, tempInDegrees, avgNumberOfChildren, bigPie, numberOfWheels, numberOfLegs, yesOrNo, thisVarIsA, letterForRespects); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +96,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int howManyBirdGroups(int numOfBirds, int sizeOfGroup = 100)
+{
+    ignoreUnused(numOfBirds, sizeOfGroup);
+    return {};
+}
 /*
  2)
  */
-
+bool isThisALetter(char userLetter)
+{
+    ignoreUnused(userLetter);
+    return {};
+}
 /*
  3)
  */
-
+char isItAOrB (char letter = 'a')
+{
+    ignoreUnused(letter);
+    return {};
+}
 /*
  4)
  */
-
+int averageOfThreeNums(int num1 = 1, int num2 = 1, int num3 = 1)
+{
+    ignoreUnused(num1, num2, num3);
+    return {};
+}
 /*
  5)
  */
-
+int getSurfaceAreaOfSquare(int width = 1, int length = 1)
+{
+    ignoreUnused(width, length);
+    return {};
+}
 /*
  6)
  */
-
+bool isThisACoolFunction(char yesOrNo)
+{
+    ignoreUnused(yesOrNo);
+    return {};
+}
 /*
  7)
  */
-
+float getVolumeOfSpeakers(float volume = 0.0f)
+{
+    ignoreUnused(volume);
+    return {};
+}
 /*
  8)
  */
-
+bool willItBlend(double weightOfObject, double areaOfObject)
+{
+    ignoreUnused(weightOfObject, areaOfObject);
+    return {};
+}
 /*
  9)
  */
-
+char whichKindOfMandolin(int numOfStrings, int numOfBlades)
+{
+    ignoreUnused(numOfStrings, numOfBlades);
+    return {};
+}
 /*
  10)
  */
-
+int numOfPaperBoxes(int numOfSheets, int sheetsInReam, int reamsInBox)
+{
+    ignoreUnused(numOfSheets, sheetsInReam, reamsInBox);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +193,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto birdWatchingStops = howManyBirdGroups(10000, 10);
     //2)
-    
+    auto checkUserChar = isThisALetter('q');
     //3)
-    
+    auto checkAOrB = isItAOrB('B');
     //4)
-    
+    auto avgDaysWorkedPerWeek = averageOfThreeNums(3, 4, 7);
     //5)
-    
+    auto areaOfFrame = getSurfaceAreaOfSquare(12, 15);
     //6)
-    
+    auto confirmFuncCoolness = isThisACoolFunction('y');
     //7)
-    
+    auto howLoudIsIt = getVolumeOfSpeakers(15.0f);
     //8)
-    
+    auto didPhoneBlend = willItBlend(400.0, 25.65);
     //9)
-    
+    auto theLoar = whichKindOfMandolin(8, 0);
     //10)
+    auto boxesOfPaperToOrder = numOfPaperBoxes(10000, 500, 8);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, birdWatchingStops, checkUserChar, checkAOrB, avgDaysWorkedPerWeek, areaOfFrame, confirmFuncCoolness, howLoudIsIt, didPhoneBlend, theLoar, boxesOfPaperToOrder);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
